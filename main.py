@@ -4,27 +4,23 @@
 # Version: 0.1
 # Date: 2023-04-01
 
-from src.oneTime import main as oneTime
-from src.key import main as key
+from src.print_key import print_key
 
 
 def main():
     print("Welcome to Crypta!")
 
     while True:
-        print("\n1. One time\n2. Generate key\n3. Exit\n")
+        print("\n1. Generate key\n0. Exit\n")
         decision = input("Enter number: ")
 
         if decision == "1":
-            oneTime()
-        elif decision == "2":
-            key()
-        elif decision == "3":
+            print_key()
+
+        elif decision == "0":
             break
         else:
             print("Invalid input")
-
-        print("\n")
 
 
 if __name__ == "__main__":
